@@ -7,7 +7,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity {
 
     private View view;
-    private String str;
+
 
 
     @Override
