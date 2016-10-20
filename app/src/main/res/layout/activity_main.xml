@@ -13,17 +13,22 @@
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado1"/>
+            android:tag="quadrado1"
+            android:onClick="clickQuadrado"/>
+
+
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado2"/>
+            android:tag="quadrado2"
+            android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado3"/>
+            android:tag="quadrado3"
+            android:onClick="clickQuadrado"/>
 
     </LinearLayout>
 
@@ -36,17 +41,20 @@
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado4"/>
+            android:tag="quadrado4"
+            android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado5"/>
+            android:tag="quadrado5"
+            android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado6"/>
+            android:tag="quadrado6"
+            android:onClick="clickQuadrado"/>
 
 
     </LinearLayout>
@@ -59,17 +67,20 @@
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado7"/>
+            android:tag="quadrado7"
+            android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado8"/>
+            android:tag="quadrado8"
+            android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:tag="quadrado9"/>
+            android:tag="quadrado9"
+            android:onClick="clickQuadrado"/>
 
     </LinearLayout>
 
