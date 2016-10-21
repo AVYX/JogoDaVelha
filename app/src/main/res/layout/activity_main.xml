@@ -14,7 +14,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado1"
-            android:onClick="clickQuadrado"/>
+            android:onClick="clickQuadrado"
+            android:enabled="false"/>
 
 
 
@@ -22,12 +23,14 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado2"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado3"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
     </LinearLayout>
@@ -42,18 +45,21 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado4"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado5"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado6"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
 
@@ -68,20 +74,32 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado7"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado8"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
         <Button
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:tag="quadrado9"
+            android:enabled="false"
             android:onClick="clickQuadrado"/>
 
     </LinearLayout>
+
+
+    <Button
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:tag="quadrado9"
+        android:onClick="newGame"
+        android:text="Play"/>
+
 
 </LinearLayout>

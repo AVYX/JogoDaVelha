@@ -24,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickQuadrado(View v){
-
-
         //constante da tag de cada botão
         //ultilizamos essa constante para reculperar o botão atravez do metodo get quadrado
         if(lastPlay.equals(XIS)) {
@@ -39,26 +37,77 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getView().getContext(),v.getTag().toString(), Toast.LENGTH_SHORT).show();
     }
 
+
+
+
+
+
     public Button getQuadrado (int tagNum){
-
-
         return (Button)getView().findViewWithTag(QUADRADO+tagNum);
     }
+
+
+
 
     public View getView() {
         return view;
     }
+
+
+
+
 
     public void setView(View view) {
         this.view = view;
     }
 
 
+
+
+
     public String getLastPlay() {
         return lastPlay;
     }
 
+
+
+
+
+
+
     public void setLastPlay(String lastPlay) {
         this.lastPlay = lastPlay;
     }
+
+
+
+
+
+
+    public void newGame (View v){
+
+        setEnableQuadrado(true);
+
+        for(int i=1; i<=9; ++i){
+            if(getQuadrado(i)!=null){
+               getQuadrado(i).setText(".");
+           }
+       }
+  }
+
+
+
+
+
+    public void setEnableQuadrado(boolean b){
+
+
+
+        for(int i=1;i<=9;++i){
+           if(getQuadrado(i)!=null){
+               getQuadrado(i).setEnabled( b );
+           }
+     }
+  }
+
 }
