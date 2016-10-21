@@ -39,30 +39,44 @@ public class MainActivity extends AppCompatActivity {
         //constante da tag de cada botão
         //ultilizamos essa constante para reculperar o botão atravez do metodo get quadrado
 
-        if (((Button) v).getText().equals(".")) {
+        if (!isFim()) {
 
-            if (getLastPlay().equals(XIS)) {
-                ((Button) v).setText(BOLA);
-                setLastPlay(BOLA);
+            if (((Button) v).getText().equals(".")) {
+
+                if (getLastPlay().equals(XIS)) {
+                    ((Button) v).setText(BOLA);
+                    setLastPlay(BOLA);
+                } else {
+                    ((Button) v).setText(XIS);
+                    setLastPlay(XIS);
+                }
+
+                // Toast.makeText(getView().getContext(), v.getTag().toString(), Toast.LENGTH_SHORT).show();
             } else {
-                ((Button) v).setText(XIS);
-                setLastPlay(XIS);
+                Toast.makeText(getView().getContext(), "Opa! escolha outro quadrado", Toast.LENGTH_SHORT).show();
             }
 
-           // Toast.makeText(getView().getContext(), v.getTag().toString(), Toast.LENGTH_SHORT).show();
-        }else{Toast.makeText(getView().getContext(),"Opa! escolha outro quadrado", Toast.LENGTH_SHORT).show();}
+            isFim();
+        }
+        }
 
-        isFim();
-    }
-
-    public void setColorQuadrados (int btn, int colorX){
+    public void setColorQuadrados(int btn, int colorX) {
 
         getQuadrado(btn).setTextColor(getResources().getColor(colorX));
-
     }
 
 
-    public void isFim() {
+    public void setColorBlack(){
+        for(int i=0; i<=9; ++i){
+            if(getQuadrado(i)!=null){
+                setColorQuadrados(i, R.color.preto);
+
+            }
+        }
+    }
+
+
+    public boolean isFim() {
 
         for (int x = 0; x <= 7; ++x) {
             String s1 = getQuadrado(estadoFinal[x][0]).getText().toString();
@@ -81,9 +95,13 @@ public class MainActivity extends AppCompatActivity {
                     setColorQuadrados(estadoFinal[x][1], R.color.vermelho);
                     setColorQuadrados(estadoFinal[x][2], R.color.vermelho);
                     Toast.makeText(getView().getContext(), "Fim de jogo", Toast.LENGTH_SHORT).show();
+
+                    return true;
                 }
             }
         }
+
+        return false;
     }
 
 
@@ -113,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
     public void newGame (View v){
 
         setEnableQuadrado(true);
+        setColorBlack();
 
         for(int i=1; i<=9; ++i){
             if(getQuadrado(i)!=null){
