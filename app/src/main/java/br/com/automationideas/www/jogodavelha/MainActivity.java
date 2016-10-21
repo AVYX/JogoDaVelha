@@ -55,38 +55,44 @@ public class MainActivity extends AppCompatActivity {
         isFim();
     }
 
-    public void isFim(){
+    public void setColorQuadrados (int btn, int colorX){
 
-        for(int x=0;x<=7; ++x){
+        getQuadrado(btn).setTextColor(getResources().getColor(colorX));
+
+    }
+
+
+    public void isFim() {
+
+        for (int x = 0; x <= 7; ++x) {
             String s1 = getQuadrado(estadoFinal[x][0]).getText().toString();
             String s2 = getQuadrado(estadoFinal[x][1]).getText().toString();
             String s3 = getQuadrado(estadoFinal[x][2]).getText().toString();
 
 
-            if((!s1.equals("."))&&(!s2.equals("."))&&(!s3.equals("."))){
+            if ((!s1.equals(".")) && (!s2.equals(".")) && (!s3.equals("."))) {
 
-                if(s1.equals(s2)&&(s2.equals(s3))){
+                if (s1.equals(s2) && (s2.equals(s3))) {
                     // if(s1 == s2 == s3){
                     //   setColorQuadrados(estadoFinal[x][0], R.color.vermelho);
                     //   setColorQuadrados(estadoFinal[x][1], R.color.vermelho);
                     //   setColorQuadrados(estadoFinal[x][2], R.color.vermelho);
-                    Toast.makeText(getView().getContext(),"fim de jogo", Toast.LENGTH_SHORT).show();
+                    setColorQuadrados(estadoFinal[x][0], R.color.vermelho);
+                    setColorQuadrados(estadoFinal[x][1], R.color.vermelho);
+                    setColorQuadrados(estadoFinal[x][2], R.color.vermelho);
+                    Toast.makeText(getView().getContext(), "Fim de jogo", Toast.LENGTH_SHORT).show();
                 }
             }
         }
-
-//public void setColorQuadrados (int btn, int colorX){
-
-// getQuadrado(btn).setText(getResources().getColor(colorX));
-
     }
+
+
+
+
 
     public Button getQuadrado (int tagNum){
         return (Button)getView().findViewWithTag(QUADRADO+tagNum);
     }
-
-
-
 
     public View getView() {
         return view;
@@ -104,11 +110,6 @@ public class MainActivity extends AppCompatActivity {
         this.lastPlay = lastPlay;
     }
 
-
-
-
-
-
     public void newGame (View v){
 
         setEnableQuadrado(true);
@@ -120,13 +121,7 @@ public class MainActivity extends AppCompatActivity {
        }
   }
 
-
-
-
-
     public void setEnableQuadrado(boolean b){
-
-
 
         for(int i=1;i<=9;++i){
            if(getQuadrado(i)!=null){
@@ -134,10 +129,6 @@ public class MainActivity extends AppCompatActivity {
            }
      }
   }
-
-
-
-
 }
 
 
