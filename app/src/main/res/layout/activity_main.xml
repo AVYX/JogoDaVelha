@@ -5,6 +5,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,7 +95,6 @@
 
     </LinearLayout>
 
-
     <Button
         android:layout_width="210dp"
         android:layout_height="70dp"
@@ -101,5 +102,20 @@
         android:onClick="newGame"
         android:text="Play"/>
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:id="@+id/rbx" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:id="@+id/rbo" />
+    </RadioGroup>
 </LinearLayout>
